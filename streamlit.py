@@ -22,6 +22,8 @@ def enc(img,text):
     return encode
 
 def save(encode):
+    if not os.path.exists("img_encoded"):
+        os.mkdir("img_encoded")
     sav = os.path.join("img_encoded",str(random.randint(1,100))+".png")
     encode.save(sav)
     return sav
