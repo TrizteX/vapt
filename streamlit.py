@@ -54,6 +54,8 @@ def decod(img):
     st.write("Decoded text: ",decode)
 
 def delete():
+    if not os.path.exists("img_encoded"):
+        os.mkdir("img_encoded")
     for file in os.listdir("img_encoded"):
         os.remove(os.path.join("img_encoded",file))
 
