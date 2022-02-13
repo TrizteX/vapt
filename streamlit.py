@@ -70,8 +70,8 @@ def main():
                 SSIM(img1,img2)
             if st.button("Decode Message"):
                     decod(img2)
-
+        delete()
 
 if __name__ == "__main__":
     main()
-    delete()
+    
